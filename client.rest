@@ -1,0 +1,13 @@
+### New customer
+POST http://localhost:9000/store/customers
+Content-Type: application/json
+
+{
+    "first_name": "Alice",
+    "last_name": "Reynolds",
+    "email": "alice@example.com",
+    "password": "supersecret"
+}
+
+### List product
+GET http://localhost:9000/store/products
