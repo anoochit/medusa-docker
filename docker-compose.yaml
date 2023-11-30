@@ -12,21 +12,15 @@ services:
     depends_on:
       - postgres
       - redis
-    environment:
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/medusa
-      REDIS_URL: redis://cache
-      NODE_ENV: development
-      JWT_SECRET: some_jwt_secret
-      COOKIE_SECRET: some_cookie_secret
+    env_file:
+      - .env
 
   postgres:
     image: postgres:latest
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: medusa
+    # ports:
+    #   - "5432:5432"
+    env_file:
+      - .env
 
   redis:
     image: redis
