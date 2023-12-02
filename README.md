@@ -32,6 +32,10 @@ Test API
 
 `curl http://localhost:9000/store/products`
 
+Swagger UI
+
+ - [Store](http://localhost:4002)
+ - [Admin](http://localhost:4001)
 
 Note for Flutter Admin
 
