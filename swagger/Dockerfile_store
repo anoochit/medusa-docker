@@ -1,0 +1,9 @@
+FROM dart:stable
+
+WORKDIR /app
+
+COPY . .
+
+RUN dart pub get
+
+ENTRYPOINT ["dart", "bin/store.dart"]

@@ -32,6 +32,7 @@ Test API
 
 `curl http://localhost:9000/store/products`
 
+
 Note for Flutter Admin
 
 - [Medusa Admin Flutter](https://github.com/mllrr96/Medusa-Admin-Flutter)

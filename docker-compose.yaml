@@ -4,7 +4,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: backend:test
+    image: backend:latest
     ports:
       - "7001:7001"
       - "9000:9000"
@@ -27,3 +27,25 @@ services:
     container_name: cache
     expose:
       - 6379
+
+  swagger-admin:
+    build:
+      context: ./swagger
+      dockerfile: Dockerfile_admin
+    image: swagger-admin:latest
+    ports:
+      - "4001:4001"
+    container_name: swagger-admin
+    depends_on:
+      - backend
+
+  swagger-store:
+    build:
+      context: ./swagger
+      dockerfile: Dockerfile_store
+    image: swagger-store:latest
+    ports:
+      - "4002:4002"
+    container_name: swagger-store
+    depends_on:
+      - backend
