@@ -10,8 +10,10 @@ Content-Type: application/json
 }
 
 ### List product
-GET http://localhost:9000/store/products?is_giftcard=false
+GET http://localhost:9000/store/products
 
+### List product by sale channel
+GET http://localhost:9000/store/products?expand=variants,images&sales_channel_id[]=sc_01HGM244VHHQMD8EKP8DBDWSH7
 
 ### Get product
 GET http://localhost:9000/store/products/prod_01HGHNMJS5RHX3NG76MHQXBQNH
@@ -31,16 +33,15 @@ Content-Type: application/json
  
 ### currency
 GET http://localhost:9000/admin/currencies
-x-medusa-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0MjgzODgsImV4cCI6MTcwMTUxNDc4OH0.ip87QhIXtkTArKIl7tkWhb_IoAKZUVJydImTt9uJgm0 
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0ODEwNTEsImV4cCI6MTcwMTU2NzQ1MX0.7lDArz3-phTyc-hsAtpeBkpGZlWxMp8w7gADy_z9GdA
 
 ### add Thai Baht currency code
 POST http://localhost:9000/admin/store/currencies/thb
-x-medusa-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0MjgzODgsImV4cCI6MTcwMTUxNDc4OH0.ip87QhIXtkTArKIl7tkWhb_IoAKZUVJydImTt9uJgm0 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0ODEwNTEsImV4cCI6MTcwMTU2NzQ1MX0.7lDArz3-phTyc-hsAtpeBkpGZlWxMp8w7gADy_z9GdA
 
 ### add region Thailand
 POST http://localhost:9000/admin/regions
-x-medusa-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0MjgzODgsImV4cCI6MTcwMTUxNDc4OH0.ip87QhIXtkTArKIl7tkWhb_IoAKZUVJydImTt9uJgm0 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0ODEwNTEsImV4cCI6MTcwMTU2NzQ1MX0.7lDArz3-phTyc-hsAtpeBkpGZlWxMp8w7gADy_z9GdA
 Content-Type: application/json
 
 {
@@ -57,3 +58,9 @@ Content-Type: application/json
       "TH"
     ]
 }
+
+### list sale channel
+
+GET http://localhost:9000/admin/sales-channels
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0ODEwNTEsImV4cCI6MTcwMTU2NzQ1MX0.7lDArz3-phTyc-hsAtpeBkpGZlWxMp8w7gADy_z9GdA
+Content-Type: application/json
