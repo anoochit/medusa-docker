@@ -1,10 +1,12 @@
 # Medusa.js docker compose
 
-## Build
+## Build container
 
 Build backend with docker compose
 
 `docker compose build`
+
+## Run server
 
 Run server
 
@@ -12,9 +14,9 @@ Run server
 
 The backend API is running at http://localhost:9000 and the admin dashboard running at port http://localhost:7001
 
-## Config
+## Add new admin account
 
-Attach to container
+Attach to medusa-server container
 
 `docker exec -it medusa-server bash`
 
@@ -29,3 +31,8 @@ Add a new admin user
 Test API
 
 `curl http://localhost:9000/store/products`
+
+Note for Flutter Admin
+
+- [Medusa Admin Flutter](https://github.com/mllrr96/Medusa-Admin-Flutter)
+- [Medusa API Flutter](https://github.com/mllrr96/Medusa_Store_API_Flutter)

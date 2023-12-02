@@ -1,4 +1,4 @@
-### New customer
+### Register new customer
 POST http://localhost:9000/store/customers
 Content-Type: application/json
 
@@ -10,4 +10,50 @@ Content-Type: application/json
 }
 
 ### List product
-GET http://localhost:9000/store/products
+GET http://localhost:9000/store/products?is_giftcard=false
+
+
+### Get product
+GET http://localhost:9000/store/products/prod_01HGHNMJS5RHX3NG76MHQXBQNH
+ 
+ 
+### search variants
+GET http://localhost:9000/store/variants
+
+### admin token
+POST http://localhost:9000/admin/auth/token
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "Hello123"
+}
+ 
+### currency
+GET http://localhost:9000/admin/currencies
+x-medusa-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0MjgzODgsImV4cCI6MTcwMTUxNDc4OH0.ip87QhIXtkTArKIl7tkWhb_IoAKZUVJydImTt9uJgm0 
+
+
+### add Thai Baht currency code
+POST http://localhost:9000/admin/store/currencies/thb
+x-medusa-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0MjgzODgsImV4cCI6MTcwMTUxNDc4OH0.ip87QhIXtkTArKIl7tkWhb_IoAKZUVJydImTt9uJgm0 
+
+### add region Thailand
+POST http://localhost:9000/admin/regions
+x-medusa-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE0MjgzODgsImV4cCI6MTcwMTUxNDc4OH0.ip87QhIXtkTArKIl7tkWhb_IoAKZUVJydImTt9uJgm0 
+Content-Type: application/json
+
+{
+    "name": "Thailand",
+    "currency_code": "thb",
+    "tax_rate": 0,
+    "payment_providers": [
+      "manual"
+    ],
+    "fulfillment_providers": [
+      "manual"
+    ],
+    "countries": [
+      "TH"
+    ]
+}
