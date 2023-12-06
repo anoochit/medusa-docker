@@ -1,0 +1,53 @@
+### List product by sale channel
+GET http://localhost:9000/store/variants?sales_channel_id=sc_01HGWZPJA431S91PVABKVNA53S
+
+### Crete draft order
+POST http://localhost:9000/admin/draft-orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE3NTgyNjYsImV4cCI6MTcwMTg0NDY2Nn0.Hne6AIQswU-pl9RIb4EyfKcIl9rTpJh-nDi1rm8nVOA
+Content-Type: application/json
+
+{
+    "email": "admin@example.com",
+    "region_id": "reg_01HGJH51VWBNJMGNYR1207K57K",
+    "items": [
+       {
+        "variant_id": "variant_01HGNF1ZB3Y7CB4WM0FJWHRBMV",
+         "quantity": 1,
+         "unit_price" : 1000
+       }
+    ],
+    "shipping_methods": [
+       {
+         "option_id": "so_01HGNHV7CZGDGYX62V9AGYYJQN"
+       }
+    ]
+}
+ 
+### Draft Order mark payment
+POST http://localhost:9000/admin/draft-orders/dorder_01HGWFKNQD4ZC1QTQ75AE49300/pay
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE3NTgyNjYsImV4cCI6MTcwMTg0NDY2Nn0.Hne6AIQswU-pl9RIb4EyfKcIl9rTpJh-nDi1rm8nVOA
+Content-Type: application/json
+
+
+### fullfillment
+POST  http://localhost:9000/admin/orders/order_01HGWD3AVR86H8H44HPSVNARDW/fulfillment
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE3NTgyNjYsImV4cCI6MTcwMTg0NDY2Nn0.Hne6AIQswU-pl9RIb4EyfKcIl9rTpJh-nDi1rm8nVOA
+Content-Type: application/json
+
+{
+    "items": [
+      {
+        "item_id": "item_01HGWCYPA3SJPSTYM34CMRM3PR",
+        "quantity": 1
+      }
+    ]
+}
+
+### fullfillment shiping
+POST  http://localhost:9000/admin/orders/order_01HGWD3AVR86H8H44HPSVNARDW/shipment
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidXNyXzAxSEdITk4wRUs0QU1OR1NLVkpLVEtURDhGIiwiZG9tYWluIjoiYWRtaW4iLCJpYXQiOjE3MDE3NTgyNjYsImV4cCI6MTcwMTg0NDY2Nn0.Hne6AIQswU-pl9RIb4EyfKcIl9rTpJh-nDi1rm8nVOA
+Content-Type: application/json
+
+{
+    "fulfillment_id": "ful_01HGWD3HH0F548CV48YTQWNPHY"
+}

@@ -1,0 +1,24 @@
+name: pos
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: '>=3.2.2 <4.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  email_validator: 2.1.17
+  flutter:
+    sdk: flutter
+  flutter_barcode_scanner: 2.0.0
+  gap: 3.0.1
+  get: 4.6.6
+  get_storage: ^2.1.1
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

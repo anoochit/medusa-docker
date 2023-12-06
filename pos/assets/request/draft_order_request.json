@@ -1,0 +1,16 @@
+{
+  "email": "admin@example.com",
+  "region_id": "reg_01HGJH51VWBNJMGNYR1207K57K",
+  "items": [
+    {
+      "variant_id": "variant_01HGNF1ZB3Y7CB4WM0FJWHRBMV",
+      "quantity": 1,
+      "unit_price": 1000
+    }
+  ],
+  "shipping_methods": [
+    {
+      "option_id": "so_01HGNHV7CZGDGYX62V9AGYYJQN"
+    }
+  ]
+}
