@@ -37,7 +37,11 @@ Swagger UI
  - [Store](http://localhost:4002)
  - [Admin](http://localhost:4001)
 
-Note for Flutter Admin
+Swagger Code Gen Package
+ 
+- [MedusaJS](./package/medusajs/)
+
+Note for Flutter Admin from [mllrr96](https://github.com/mllrr96)
 
 - [Medusa Admin Flutter](https://github.com/mllrr96/Medusa-Admin-Flutter)
 - [Medusa API Flutter](https://github.com/mllrr96/Medusa_Store_API_Flutter)
