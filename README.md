@@ -1,12 +1,19 @@
-# Medusa.js docker compose
+# Medusa.js
 
-## Build container
+This repository compose of 
+
+ - Docker compose for Medusa.js backend
+ - Swagger UI for Store and Admin API
+ - POS example app use a raw REST API Call
+ - Medusa.js Dart & Flutter package, generate from Swagger Code Gen
+
+## Medusa.js Docker compose 
+
+Build container 
 
 Build backend with docker compose
 
 `docker compose build`
-
-## Run server
 
 Run server
 
@@ -14,9 +21,7 @@ Run server
 
 The backend API is running at http://localhost:9000 and the admin dashboard running at port http://localhost:7001
 
-## Add new admin account
-
-Attach to medusa-server container
+Add new admin account, attach to medusa-server container
 
 `docker exec -it medusa-server bash`
 
@@ -32,16 +37,22 @@ Test API
 
 `curl http://localhost:9000/store/products`
 
-Swagger UI
+## Swagger UI
 
  - [Store](http://localhost:4002)
  - [Admin](http://localhost:4001)
 
-Swagger Code Gen Package
+## Sample POS App
+
+ - [POS](/pos/) 
+
+## Swagger Code Gen, a package for Dart & Flutter
  
 - [MedusaJS](./package/medusajs/)
 
-Note for Flutter Admin from [mllrr96](https://github.com/mllrr96)
+## Note: Flutter Medusa Admin App 
+
+Flutter Admin from [mllrr96](https://github.com/mllrr96)
 
 - [Medusa Admin Flutter](https://github.com/mllrr96/Medusa-Admin-Flutter)
 - [Medusa API Flutter](https://github.com/mllrr96/Medusa_Store_API_Flutter)
